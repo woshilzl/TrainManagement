@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>就业管理</title>
 </head>
 <body>
-
+	入职情况
 </body>
 </html>
