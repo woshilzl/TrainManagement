@@ -3,7 +3,7 @@ package com.project.bean;
 import java.util.Date;
 /**
  * 该实体和数据库t_job表对应，且属性名和数据库列名已经保持一致
- * @author Administrator
+ * @author 李治龙
  *
  */
 public class JobBean {
