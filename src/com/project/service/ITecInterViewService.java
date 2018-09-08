@@ -1,5 +1,7 @@
 package com.project.service;
 
+import com.project.bean.StudentBean;
+
 public interface ITecInterViewService {
 	
 	/**
