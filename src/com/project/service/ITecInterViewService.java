@@ -1,7 +1,15 @@
 package com.project.service;
 
-import com.project.bean.StudentBean;
+import java.util.List;
 
+import com.project.bean.StudentBean;
+import com.project.bean.TecInterViewBean;
+
+/**
+ * 技术面试接口
+ * @author SEN
+ *
+ */
 public interface ITecInterViewService {
 	
 	/**
@@ -9,6 +17,20 @@ public interface ITecInterViewService {
 	 * @param status 值：全部、通过、未通过
 	 * @return
 	 */
-	public StudentBean showStudent(String status);
+	public List<StudentBean> showStudent(String status);
+	
+	/**
+	 * 通过条件查找学生
+	 * @param status 值：全部、通过、未通过
+	 * @param bean 学生实体用来保存查询条件
+	 * @return
+	 */
+	public StudentBean findStudent(String status,StudentBean bean);
+	
+	/**
+	 * 面试
+	 * @param bean 技术面试实体
+	 */
+	public void interview(TecInterViewBean bean);
 	
 }
