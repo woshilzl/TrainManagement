@@ -19,12 +19,58 @@ public class SimulInterviewBean {
 	private Date date;
 	
 	/**
-	 * 面试评价
+	 * 面试备注
 	 */
-	private String view;
+	private String comment;
 	
 	/**
-	 * 面试状态
+	 * 沟通能力
 	 */
-	private String status;
+	private String ability;
+	
+	/**
+	 * 学员对象
+	 */
+	private StudentBean stu;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	public String getAbility() {
+		return ability;
+	}
+
+	public void setAbility(String ability) {
+		this.ability = ability;
+	}
+
+	public StudentBean getStu() {
+		return stu;
+	}
+
+	public void setStu(StudentBean stu) {
+		this.stu = stu;
+	}
+	
 }
