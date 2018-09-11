@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * 模拟面试表实体
- * @author SEN
+ * @author 王森
  *
  */
 public class SimulInterviewBean {

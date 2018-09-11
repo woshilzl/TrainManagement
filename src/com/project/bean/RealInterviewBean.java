@@ -7,14 +7,48 @@ import java.util.Date;
  *
  */
 public class RealInterviewBean {
+	/**
+	 * 对应真实面试表的主键
+	 */
 	private int ri_id;
-	private Date ri_date;
-	private String ri_company;
-	private String ri_position;
-	private String ri_result;
-	private String ri_comment;
-	// 缺少一个StudentBean对象，属于学生管理模块，后续需要添加
 	
+	/**
+	 * 对应真实面试时间
+	 */
+	private Date ri_date;
+	
+	/**
+	 * 对应真实面试企业
+	 */
+	private String ri_company;
+	
+	/**
+	 * 对应真实面试职位
+	 */
+	private String ri_position;
+	
+	/**
+	 * 对应真实面试结果
+	 */
+	private String ri_result;
+	
+	/**
+	 * 对应真实面试反馈
+	 */
+	private String ri_comment;
+	
+	/**
+	 * 对应真实面试学员信息（数据库学生表的主键引用）
+	 */
+	private StudentBean student;
+	
+	
+	public StudentBean getStudent() {
+		return student;
+	}
+	public void setStudent(StudentBean student) {
+		this.student = student;
+	}
 	public int getRi_id() {
 		return ri_id;
 	}

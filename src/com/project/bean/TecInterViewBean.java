@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * 技术面试表实体
- * @author SEN
+ * @author 王森
  *
  */
 public class TecInterViewBean {
