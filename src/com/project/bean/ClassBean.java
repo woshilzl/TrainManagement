@@ -54,7 +54,6 @@ public class ClassBean {
 	}
 	public void setStulist(List<StudentBean> stulist) {
 		this.stulist = stulist;
->>>>>>> 3acf3ab8b20ab004a09046ff2235a01add581b7e
 	}
 	
 }

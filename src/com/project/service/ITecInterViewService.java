@@ -26,7 +26,5 @@ public interface ITecInterViewService {
 	 * @param bean 技术面试实体
 	 */
 	public void interview(TecInterViewBean bean);
-
->>>>>>> 3acf3ab8b20ab004a09046ff2235a01add581b7e
 	
 }

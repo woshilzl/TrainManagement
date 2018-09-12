@@ -2,18 +2,18 @@ package com.project.bean;
 
 
 /**
- * ½×¶ÎÊµÌå
+ * ï¿½×¶ï¿½Êµï¿½ï¿½
  * 
- * @author ÐìÕþ
+ * @author ï¿½ï¿½ï¿½ï¿½
  *
  */
 public class PeriodBean {
 	/**
-	 * ½×¶Îid
+	 * ï¿½×¶ï¿½id
 	 */
 	private int pid;
 	/**
-	 * ½×¶ÎÃû³Æ
+	 * ï¿½×¶ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	private int pname;
 
@@ -29,9 +29,8 @@ public class PeriodBean {
 		return pname;
 	}
 
-	public void setPname(int pname) {
+	public void setPname(int pname){
 		this.pname = pname;
 	}
 
->>>>>>> 3acf3ab8b20ab004a09046ff2235a01add581b7e
 }
