@@ -11,11 +11,22 @@ public class LeaveBean {
 	private String reason;// 请假事由
 	private String comment; // 备注
 	private String photo; //假条
+	private StudentBean stuBean; //一条请假记录对应一个学生
+	private TeacherBean teaBean; //一条请假记录对应一个老师
+	@Override
+	public String toString() {
+		return "LeaveBean [id=" + id + ", sid=" + sid + ", empid=" + empid
+				+ ", sdate=" + sdate + ", edate=" + edate + ", reason="
+				+ reason + ", comment=" + comment + ", photo=" + photo
+				+ ", stuBean=" + stuBean + ", teaBean=" + teaBean + "]";
+	}
 	public LeaveBean() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public LeaveBean(int id, int sid, int empid, Date sdate, Date edate, String reason, String comment, String photo) {
+	public LeaveBean(int id, int sid, int empid, Date sdate, Date edate,
+			String reason, String comment, String photo, StudentBean stuBean,
+			TeacherBean teaBean) {
 		super();
 		this.id = id;
 		this.sid = sid;
@@ -25,6 +36,8 @@ public class LeaveBean {
 		this.reason = reason;
 		this.comment = comment;
 		this.photo = photo;
+		this.stuBean = stuBean;
+		this.teaBean = teaBean;
 	}
 	public int getId() {
 		return id;
@@ -74,4 +87,19 @@ public class LeaveBean {
 	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
+	public StudentBean getStuBean() {
+		return stuBean;
+	}
+	public void setStuBean(StudentBean stuBean) {
+		this.stuBean = stuBean;
+	}
+	public TeacherBean getTeaBean() {
+		return teaBean;
+	}
+	public void setTeaBean(TeacherBean teaBean) {
+		this.teaBean = teaBean;
+	}
+	
+	
+	
 }
