@@ -6,9 +6,5 @@
         <package name="com.project.bean"/>
 	</typeAliases>
 	
-	<!-- <mappers>
-		<mapper resource="com/project/mapper/UserBeanMapper.xml"/>
-	</mappers> -->
-	
 </configuration>
 
