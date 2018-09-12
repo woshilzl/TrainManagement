@@ -16,7 +16,7 @@ public class AttendanceBean {
 	/**
 	 * 考勤表学生id
 	 */
-	private int sid;
+	private StudentBean stu;
 	
 	/**
 	 * 考勤表学生考勤状态
@@ -36,13 +36,6 @@ public class AttendanceBean {
 		this.id = id;
 	}
 
-	public int getSid() {
-		return sid;
-	}
-
-	public void setSid(int sid) {
-		this.sid = sid;
-	}
 
 	public String getStatus() {
 		return status;
@@ -58,6 +51,14 @@ public class AttendanceBean {
 
 	public void setDate(Date date) {
 		this.date = date;
+	}
+
+	public StudentBean getStu() {
+		return stu;
+	}
+
+	public void setStu(StudentBean stu) {
+		this.stu = stu;
 	}
 	
 }
