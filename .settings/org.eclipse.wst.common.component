@@ -2,8 +2,9 @@
     <wb-module deploy-name="TrainManagement">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <wb-resource deploy-path="/WEB-INF/classes/" source-path="/ImportedClasses"/>
+
+        <property name="java-output-path" value="/Spring02_BeanFactory/build/classes"/>
         <property name="context-root" value="TrainManagement"/>
-        <property name="java-output-path" value="/TrainManagement/build/classes"/>
+
     </wb-module>
 </project-modules>

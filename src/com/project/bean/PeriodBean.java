@@ -1,23 +1,37 @@
 package com.project.bean;
 
+
+/**
+ * ½×¶ÎÊµÌå
+ * 
+ * @author ÐìÕþ
+ *
+ */
 public class PeriodBean {
-	private int p_id;
-	private String p_name;
-	public int getP_id() {
-		return p_id;
+	/**
+	 * ½×¶Îid
+	 */
+	private int pid;
+	/**
+	 * ½×¶ÎÃû³Æ
+	 */
+	private int pname;
+
+	public int getPid() {
+		return pid;
 	}
-	public void setP_id(int p_id) {
-		this.p_id = p_id;
+
+	public void setPid(int pid) {
+		this.pid = pid;
 	}
-	public String getP_name() {
-		return p_name;
+
+	public int getPname() {
+		return pname;
 	}
-	public void setP_name(String p_name) {
-		this.p_name = p_name;
+
+	public void setPname(int pname) {
+		this.pname = pname;
 	}
-	@Override
-	public String toString() {
-		return "PeriodBean [p_id=" + p_id + ", p_name=" + p_name + "]";
-	}
-	
+
+>>>>>>> 3acf3ab8b20ab004a09046ff2235a01add581b7e
 }

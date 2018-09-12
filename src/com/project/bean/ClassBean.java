@@ -1,30 +1,60 @@
-package com.project.bean;
+﻿package com.project.bean;
 
+import java.util.List;
+
+/**
+ * @author 杨阳
+ * 班级表的bean对象
+ * */
 public class ClassBean {
-	private int c_id;
-	private String c_name;
-	private PeriodBean period;
-	public int getC_id() {
-		return c_id;
+	// 主键班级ID
+	private int cId;
+	// 班级名称
+	private String className;
+	// 班级阶段
+	private StageBean stage;
+	// 班级讲师
+	private TeacherBean teacher;
+	// 班主任
+	private HeadTeacherBean headTeacher;
+	// 学生
+	private List<StudentBean> stulist;
+	public int getcId() {
+		return cId;
 	}
-	public void setC_id(int c_id) {
-		this.c_id = c_id;
+	public void setcId(int cId) {
+		this.cId = cId;
 	}
-	public String getC_name() {
-		return c_name;
+	public String getClassName() {
+		return className;
 	}
-	public void setC_name(String c_name) {
-		this.c_name = c_name;
+	public void setClassName(String className) {
+		this.className = className;
 	}
-	public PeriodBean getPeriod() {
-		return period;
+	public StageBean getStage() {
+		return stage;
 	}
-	public void setPeriod(PeriodBean period) {
-		this.period = period;
+	public void setStage(StageBean stage) {
+		this.stage = stage;
 	}
-	@Override
-	public String toString() {
-		return "ClassBean [c_id=" + c_id + ", c_name=" + c_name + ", period=" + period + "]";
+	public TeacherBean getTeacher() {
+		return teacher;
+	}
+	public void setTeacher(TeacherBean teacher) {
+		this.teacher = teacher;
+	}
+	public HeadTeacherBean getHeadTeacher() {
+		return headTeacher;
+	}
+	public void setHeadTeacher(HeadTeacherBean headTeacher) {
+		this.headTeacher = headTeacher;
+	}
+	public List<StudentBean> getStulist() {
+		return stulist;
+	}
+	public void setStulist(List<StudentBean> stulist) {
+		this.stulist = stulist;
+>>>>>>> 3acf3ab8b20ab004a09046ff2235a01add581b7e
 	}
 	
 }
