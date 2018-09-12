@@ -7,6 +7,6 @@ public interface ITecInterViewService {
 	 * @param status 值：全部、通过、未通过
 	 * @return
 	 */
-	public StudentBean showStudent(String status);
+//	public StudentBean showStudent(String status);
 	
 }

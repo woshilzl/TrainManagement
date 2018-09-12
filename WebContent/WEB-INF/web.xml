@@ -28,7 +28,7 @@
   	<url-pattern>*.action</url-pattern>
   </servlet-mapping>
   
-  <filter>
+  <!-- <filter>
   	<filter-name>charset</filter-name>
   	<filter-class>com.project.filter.CharsetFilter</filter-class>
   	<init-param>
@@ -39,7 +39,7 @@
   <filter-mapping>
   	<filter-name>charset</filter-name>
   	<url-pattern>*.action</url-pattern>
-  </filter-mapping>
+  </filter-mapping> -->
   
   
   <!-- 配置全局的内容 -->

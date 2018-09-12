@@ -7,12 +7,43 @@ import java.util.Date;
  *
  */
 public class JobBean {
+	
+	/**
+	 * 对应入职信息表的主键
+	 */
 	private int j_id;
+	
+	/**
+	 * 对应入职日期
+	 */
 	private Date j_date;
+	
+	/**
+	 * 对应入职岗位
+	 */
 	private String j_position;
+	
+	/**
+	 * 对应入职薪资
+	 */
 	private double j_salary;
+	
+	/**
+	 * 对应入职企业
+	 */
 	private String j_company;
-	// 缺少一个StudentBean对象，是学生管理模块定义的实体，后续需要添加
+	
+	/**
+	 * 对应入职学员信息（数据库学生表的主键引用）
+	 */
+	private StudentBean student;
+	
+	public StudentBean getStudent() {
+		return student;
+	}
+	public void setStudent(StudentBean student) {
+		this.student = student;
+	}
 	public int getJ_id() {
 		return j_id;
 	}

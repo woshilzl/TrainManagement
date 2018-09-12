@@ -33,10 +33,10 @@ public class TecInterViewBean {
 	 */
 	private String status;
 
-	/**
-	 * 学员对象
-	 */
-	private StudentBean stu;
+//	/**
+//	 * 学员对象
+//	 */
+//	private StudentBean stu;
 	
 	public int getId() {
 		return id;
@@ -78,12 +78,12 @@ public class TecInterViewBean {
 		this.status = status;
 	}
 
-	public StudentBean getStu() {
-		return stu;
-	}
-
-	public void setStu(StudentBean stu) {
-		this.stu = stu;
-	}
+//	public StudentBean getStu() {
+//		return stu;
+//	}
+//
+//	public void setStu(StudentBean stu) {
+//		this.stu = stu;
+//	}
 	
 }

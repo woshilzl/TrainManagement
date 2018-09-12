@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.dao.IEmployManagementDao">
+	
+	<select id="findAllWaitedStudent"  parameterType="int"  resultMap="tempMap">
+		select * from t_user;
+	</select>
+	
+	<resultMap type="StudentBean" id="tempMap">
+		<id property="s_id" column="s_id" ></id>
+		<result property="s_name"  column="s_name" ></result>
+		<result property="s_direction"  column="s_direction" ></result>
+		<result property="s_no"  column="s_no" ></result>
+		
+		<association property="classbean"  javaType="ClassBean">
+			<id property="c_id"  column="c_id"></id>
+			<result property="c_name"  column="c_name"></result>
+			
+			<association property="period"  javaType="PeriodBean">
+				<id  property="p_id"  column="p_id"></id>
+				<result  property="p_name"  column="p_name"></result>
+			</association>
+		</association>
+	</resultMap>
+	
+</mapper>

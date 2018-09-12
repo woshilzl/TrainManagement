@@ -17,4 +17,10 @@ public class JobServiceImpl implements IJobService {
 		return null;
 	}
 
+	@Override
+	public boolean addJobInformation(JobBean job) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

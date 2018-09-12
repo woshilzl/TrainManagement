@@ -14,4 +14,11 @@ public interface IJobService {
 	 * @return List<JobBean>
 	 */
 	public List<JobBean> findAllJobInformation(); 
+	
+	/**
+	 * 添加一条就业信息，返回布尔用于检查添加是否成功
+	 * @param JobBean
+	 * @return boolean
+	 */
+	public boolean addJobInformation(JobBean job);
 }
