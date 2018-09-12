@@ -30,6 +30,15 @@ public class StudentInfoBean {
 	private String experience;
 	// 简单信息
 	private StudentBean stu;
+	// 毕业院校
+	private String school;
+	
+	public String getSchool() {
+		return school;
+	}
+	public void setSchool(String school) {
+		this.school = school;
+	}
 	public int getId() {
 		return id;
 	}

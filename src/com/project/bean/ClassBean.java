@@ -12,7 +12,7 @@ public class ClassBean {
 	// 班级名称
 	private String className;
 	// 班级阶段
-	private StageBean stage;
+	private PeriodBean period;
 	// 班级讲师
 	private TeacherBean teacher;
 	// 班主任
@@ -31,11 +31,11 @@ public class ClassBean {
 	public void setClassName(String className) {
 		this.className = className;
 	}
-	public StageBean getStage() {
-		return stage;
+	public PeriodBean getPeriod() {
+		return period;
 	}
-	public void setStage(StageBean stage) {
-		this.stage = stage;
+	public void setPeriod(PeriodBean period) {
+		this.period = period;
 	}
 	public TeacherBean getTeacher() {
 		return teacher;

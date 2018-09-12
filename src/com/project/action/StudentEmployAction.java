@@ -21,6 +21,6 @@ public class StudentEmployAction {
 		for (StudentBean tempstudent : student) {
 			System.out.println(tempstudent);
 		}
-		return "success.jsp";
+		return null;
 	}
 }

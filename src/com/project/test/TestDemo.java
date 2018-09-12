@@ -14,10 +14,8 @@ public class TestDemo {
 	@Test
 	public void test(){
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		IEmployManagementDao dao = (IEmployManagementDao) context.getBean("EmployManagementDaoImpl");
+		IEmployManagementDao dao = (IEmployManagementDao) context.getBean(IEmployManagementDao.class);
 		List<StudentBean> list = dao.findAllWaitedStudent();
-		for (StudentBean student : list) {
-			System.out.println(student);
-		}
+		System.out.println(list);
 	}
 }

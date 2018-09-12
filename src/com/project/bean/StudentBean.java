@@ -13,7 +13,7 @@ public class StudentBean {
 	// 所属班级（内包含学生的讲师和班主任）
 	private ClassBean cb;
 	// 学号
-	private int stuNum;
+	private String stuNum;
 	// 学生详细信息
 	private StudentInfoBean stuinfo;
 	public int getId() {
@@ -40,10 +40,10 @@ public class StudentBean {
 	public void setCb(ClassBean cb) {
 		this.cb = cb;
 	}
-	public int getStuNum() {
+	public String getStuNum() {
 		return stuNum;
 	}
-	public void setStuNum(int stuNum) {
+	public void setStuNum(String stuNum) {
 		this.stuNum = stuNum;
 	}
 	public StudentInfoBean getStuinfo() {

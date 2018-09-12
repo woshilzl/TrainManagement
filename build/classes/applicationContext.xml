@@ -21,7 +21,6 @@
         
 
 	<!-- 扫描业务层 -->
-	<context:component-scan base-package="com.project.action"></context:component-scan>
 	<context:component-scan base-package="com.project.service"></context:component-scan>
 	<context:component-scan base-package="com.project.dao"></context:component-scan>
 	

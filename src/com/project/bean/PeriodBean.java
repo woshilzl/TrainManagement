@@ -1,19 +1,18 @@
 package com.project.bean;
 
-
 /**
- * �׶�ʵ��
+ * 阶段实体
  * 
- * @author ����
+ * @author 徐政
  *
  */
 public class PeriodBean {
 	/**
-	 * �׶�id
+	 * 阶段id
 	 */
 	private int pid;
 	/**
-	 * �׶�����
+	 * 阶段名称
 	 */
 	private int pname;
 
@@ -29,7 +28,7 @@ public class PeriodBean {
 		return pname;
 	}
 
-	public void setPname(int pname){
+	public void setPname(int pname) {
 		this.pname = pname;
 	}
 
