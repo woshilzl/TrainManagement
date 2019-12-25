@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="vue.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>使用Vue+Bootstrap完成简易登记表Demo</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
+  </head>
+  <body>
+	<!-- 使用bootstrap框架搭建页面布局 -->
+    <div class="container">
+		<form class="form">
+			<div class="form-group">
+				<label>姓名</label>
+				<input type="text" class="form-control" v-model="nameNode" placeholder="请输入姓名" />
+			</div>
+			<div class="form-group">
+				<label>年龄</label>
+				<input type="number" class="form-control" v-model="ageNode" placeholder="请输入年龄" />
+			</div>
+		</form>
+		
+		<input type="button" class="btn btn-default btn-primary" value="确定" @click="add" />
+		<input type="button" class="btn btn-default btn-primary" value="按年龄排序" @click="ageSort"/>
+		
+		<table class="table table-striped table-hover" style="margin-top: 20px;text-align: center;">
+			<thead>
+				<tr style="background-color: #C0C0C0;color: white;">
+					<td>序号</td>
+					<td>姓名</td>
+					<td>年龄</td>
+					<td>操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for='i in msg'>
+					<td>{{$index+1}}</td>
+					<td>{{i.name}}</td>
+					<td>{{i.age}}</td>
+					<td>
+						<input type="button" class="btn btn-default btn-danger btn-xs" 
+						value="删除" data-toggle="modal" data-target="#myModal" @click="index=$index"/>
+					</td>
+				</tr>
+				<tr v-show="msg.length?false:true">
+					<td colspan="4">请输入数据</td>
+				</tr>
+				<tr v-show="msg.length?true:false">
+					<td colspan="4">
+						<input type="button" class="btn btn-danger btn-default btn-sm" value="全部删除" 
+						data-toggle="modal" data-target="#allModal" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		
+		<!-- 删除选中数据弹窗 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">确认框</h4>
+		      </div>
+		      <div class="modal-body">
+		        确认要删除选中数据吗？
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		        <button type="button" class="btn btn-primary" @click="detach" data-dismiss="modal">确认删除</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		<!-- 删除全部数据弹窗 -->
+		<div class="modal fade" id="allModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">确认框</h4>
+		      </div>
+		      <div class="modal-body">
+		        确认要删除全部数据吗？
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		        <button type="button" class="btn btn-primary" @click="detachAll" data-dismiss="modal">确认删除</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	
+	<!-- Vue处理事件 -->
+	<script type="text/javascript">
+		new Vue({
+			el:'body',
+			data:{
+				nameNode:'',
+				ageNode:'',
+				msg:[],
+				index:0
+			},
+			methods:{
+				add:function(){
+					this.msg.push({
+						name:this.nameNode,
+						age:this.ageNode
+					})
+					// console.log(this.index,this.nameNode,this.ageNode);
+				},
+				detach:function(){
+					this.msg.splice(this.index,1)
+					// console.log(this.index);
+				},
+				detachAll:function(){
+					this.msg = []
+				},
+				ageSort:function(){
+					this.msg.sort(function(json1,json2){
+						return json1.age - json2.age;
+					})
+				}
+			}
+		})
+	</script>
+    
+  </body>
+</html>
